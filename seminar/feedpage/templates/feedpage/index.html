@@ -22,7 +22,7 @@
                     {% if user.is_authenticated %}
                         {% if request.user != feed.author %}
                             <a href="/accounts/{{ feed.author.id }}/follow">
-                            {% if request.user.profile not in feed.author.profile.follows.all %}
+                            {% if request.user.profile not in feed.author.profile.followed.all %}
                                 <p>{{ request.user.profile }}</p>
                                 <p>{{ feed.author.profile.follows }}</p>
                                 팔로우
